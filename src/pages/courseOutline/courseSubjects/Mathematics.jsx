@@ -1,6 +1,7 @@
 import './courseSubjects.css';
 import { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { BiArrowBack } from 'react-icons/bi';
+import { Link, useLocation } from 'react-router-dom';
 import mathematics from '../courseContents/mathematics.json';
 
 
@@ -28,6 +29,12 @@ function Mathematics() {
 
         <div className='courseSubjects-header' onFocus={ScrollToTop()} style={{margin:'0 auto', textAlign:'center', padding:'3rem 5em', width:'100%', background:'gray'}}>
 
+            <div style={{display:'flex', justifyContent:'start'}}>
+                <Link to= '/dash-board'>
+                    <BiArrowBack color='white' size={40}/>
+                </Link>
+            </div>
+
             <div >
                 <h1 id='courseSubjects-hd' style={{color:'white'}}>MATHEMATICS</h1> 
                 <p style={{color:'black'}}>Here are lists of availaible topics in Mathematics. Click to learn more.</p>
@@ -38,7 +45,7 @@ function Mathematics() {
 
             <div>
 
-                <input placeholder="Enter Post Title" onChange={event => setQuery(event.target.value)}  style={{width:'350px',height:'52px', padding: '10px 15px 6px', fontFamily:'BioRhyme, serif'}}  className="dashinput" />
+                <input placeholder="Search Topic" onChange={event => setQuery(event.target.value)}  style={{width:'40vw',height:'52px', padding: '10px 15px 6px', fontFamily:'BioRhyme, serif'}}  className="dashinput" />
 
                 <div className='courseSubjects-cont'>
                     
