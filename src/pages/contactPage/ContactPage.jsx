@@ -9,7 +9,7 @@ import { setMessagex } from '../../slices/authSlice';
 import {  useContactUsMutation } from '../../slices/usersApiSlice'
 import { MapPin, Phone, EnvelopeSimple, FacebookLogo, LinkedinLogo, InstagramLogo } from 'phosphor-react';
 import img from '../../assets/image4.jpg';
-import dtlogo from '../../assets/dtlogo.png';
+import dtlogo from '../../assets/dtlogo2.png';
 import CustomInput from '../../components/customInput/CustomInput';
 import CustomButton from '../../components/customButton/CustomButton';
 import Loader from '../../components/loader/Loader';
@@ -61,6 +61,9 @@ function ContactPage () {
         }
 	}
 
+	function goBackAndRefresh() {
+        window.history.go(-1);
+    }
 
 		
 
@@ -78,16 +81,14 @@ function ContactPage () {
 				<div className="colc">
 
 					<div>
-						<Link to= '/'>
-    	                	<BiArrowBack color='white' size={30}/>
-	                	</Link>
+						<BiArrowBack onClick={goBackAndRefresh} style={{cursor: 'pointer'}} color='white' size={30}/> Back
 					</div>
 					
 
 					<div>
 
 						<Link to='/' className='links'>
-							<img src={dtlogo} alt="dtlogo" className="img"  style={{width:'150px'}} />          
+							<img src={dtlogo} alt="dtlogo" className="img"  style={{width:'200px', height:'120px'}} />          
 						</Link>
 					</div>
 
@@ -101,7 +102,9 @@ function ContactPage () {
 						(
 							<>
 								<CustomInput placeholder={userInfo.fullName}  style = {{width: '100%'}}  value= {fullName}  onChange={() => setFullName (userInfo.fullName)}/>
-								<CustomInput placeholder= {userInfo.email} style = {{width: '100%'}}  value= {email} onChange={() => setEmail (userInfo.email)}  />
+								
+								<CustomInput placeholder= {userInfo.email}  type='email' style = {{width: '100%'}}  value= {email} onChange={() => setEmail (userInfo.email)}  />
+								
 								<CustomInput placeholder= {userInfo.phone} style = {{width: '100%'}}  value= {phone}  onChange={() => setPhone (userInfo.phone)}  />
 							</>
 						)
@@ -111,7 +114,9 @@ function ContactPage () {
 						( 
 							<>
 								<CustomInput placeholder= 'Full Name*' style = {{width: '100%'}}  value= {fullName}  onChange={(e) => setFullName (e.target.value)} />		
-								<CustomInput placeholder= 'Email Address*' style = {{width: '100%'}}  value= {email}  onChange={(e) => setEmail (e.target.value)} />
+								
+								<CustomInput placeholder= 'Email Address*' style = {{width: '100%'}} type='email' value= {email}  onChange={(e) => setEmail (e.target.value)} />
+								
 								<CustomInput placeholder= 'Phone Number*' style = {{width: '100%'}}  value= {phone}  onChange={(e) => setPhone (e.target.value)} />		
 							</>
 						)	
@@ -119,7 +124,7 @@ function ContactPage () {
 					
 					
 					<textarea placeholder="Write us a message" cols="20" rows="4" value={message} id="textc" minLength={10} onChange={(e) => setMessage (e.target.value)} ></textarea>
-					
+					<br />
 					<CustomButton title = 'SUBMIT' style = {{width: '100%', margin: '8px 0% 0'}} />
 
 				</div>

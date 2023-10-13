@@ -11,29 +11,63 @@
 
 .courseSubjects-detailz{
     border-radius: 50px;
-    padding: 1.5rem 0;
+    padding: 1.3rem 0.6rem;
     margin: 0;
     text-decoration: none;
     width: 300px;
     margin-bottom: 30px;
-    background-color: #2e001e;
-    border: 5px solid #ee35bc;
+    background-color: white;
+    border: 5px solid rgb(0, 0, 0);
 }
 
 .courseSubjects-detailz a{
-    color: #ee35bc;
+    color: #000000;
 }
 
 .courseSubjects-detailz a:hover{
-    color: #ffffff;
+    color: #ff0000;
+    text-decoration: none;
 }
 
 .courseSubjects-detailz h1, h3{
     font-size: 1.3rem;
-    color: rgb(0, 0, 0);
 }
 
 .dashinput:focus{
     outline: 2px solid rgb(0, 0, 0);
+}
+
+
+
+
+
+@media screen and (max-width:800px){
+    .courseSubjects-cont{
+        display: grid;
+        justify-content:center;
+        text-align: center;
+        gap: 2em;
+        padding: 1rem 0;    
+    } 
+    #courseSubjects-hd h1{
+        font-size: 1.2rem;
+    }
+
+    #courseSubjects-hd p{
+        font-size: 0.9rem;
+        width: 70%;
+        margin: 0 auto;
+    }
+    
+    .courseSubjects-detailz{
+        border-radius: 50px;
+        padding: 1.2rem 0.4rem;
+        margin: 0;
+        text-decoration: none;
+        width: 250px;
+        margin-bottom: 30px;
+    }    
+    
+
 }
 

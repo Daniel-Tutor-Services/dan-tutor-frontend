@@ -2,7 +2,8 @@
     padding: 0.5em;
     display: flex;
     justify-content: center;
-    background-color: #14131393;
+    background-color: #1413135e;
+    color: white;
 }
 
 
@@ -18,7 +19,8 @@
 
 .sidebar-img img{
     display: flex;
-    width: 150px;
+    width: 230px;
+    margin: 0 auto;
 }
 
 .sidebar-icon{
@@ -37,7 +39,7 @@
 }
 
 .sidebar-icon p:hover{
-    color: #9b0727;
+    color:red;
     font-weight: bolder;
     transition: ease-in .3s;
 }

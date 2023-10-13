@@ -2,7 +2,7 @@ import './TermsOfUse.css';
 import { useEffect } from 'react';
 import { BiArrowBack } from 'react-icons/bi';
 import { Link, useLocation } from 'react-router-dom';
-import dtlogo from '../../../assets/dtlogo.png';
+import dtlogo from '../../../assets/dtlogo2.png';
 
 
 function TermsOfUse() {
@@ -21,6 +21,11 @@ function TermsOfUse() {
         return null;
     }
 
+    function goBackAndRefresh() {
+        window.history.go(-1);
+    }
+
+
 
 
     return (
@@ -28,22 +33,19 @@ function TermsOfUse() {
         <div className='termspage'>
                 
             <div className='termshead'>
+                
+                <BiArrowBack onClick={goBackAndRefresh} style={{cursor: 'pointer'}} color='white' size={40}/>
+                
                 <div className='termsheadpic'>
                     <Link to='/' className='links'>
-                        <img src={dtlogo} alt="dtlogo" style={{width:'150px'}}/>
+                        <img  src={dtlogo} alt="dtlogo"/>
                     </Link>
+
+                    <div className='termsheader'>                    
+                        <h1>TERMS OF USE</h1>
+                    </div>
+                    
                 </div>
-
-                <Link to= '/'>
-                    <BiArrowBack color='white' size={40}/>
-                </Link>
-
-
-                <div className='termsheader'>                    
-                    <h1>TERMS OF USE</h1>
-
-                </div>
-                
             </div>
                 
                 

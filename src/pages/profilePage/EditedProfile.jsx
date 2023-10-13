@@ -57,21 +57,21 @@ function EditedProfile() {
     const redBorder = {
         width: '100%',
         margin: '2% 0 0 0',
-        border: '2px solid red',
+        border: '1px solid red',
         borderRadius: '15px'
     }
 
     const greenBorder = {
         width: '100%',
         margin: '2% 0 0 0',
-        border: '2px solid green',
+        border: '1px solid green',
         borderRadius: '15px'
     }
 
     const yellowBorder = {
         width: '100%',
         margin: '2% 0 0 0',
-        border: '2px solid yellow',
+        border: '1px solid yellow',
         borderRadius: '15px'
     }
   
@@ -151,6 +151,9 @@ function EditedProfile() {
         else{
             if(validator.isNumeric(phone)){
                 setPhoneStyle({...phoneStyle, border: '2px solid green'})
+                toast.success(`Phone Number Updated `, {
+                    position: toast.POSITION.TOP_RIGHT
+                })
                 setPhoneIsValid(true)
             }
             
@@ -186,6 +189,15 @@ function EditedProfile() {
             });
             
         } 
+
+                
+        else if(phone.length < 11){
+            setPhoneStyle({...redBorder})
+            toast.warn("Invalid Phone Number, Number too short", {
+                position: toast.POSITION.TOP_RIGHT
+            })
+        }
+
         else {
 
             const res = await updateProfile ({
@@ -230,7 +242,7 @@ function EditedProfile() {
 
                     <div className="border2" >
                         <p style={{marginBottom:"10px"}}>Full Name</p> 
-                        <CustomInput placeholder={userInfo.fullName} value= {fullName} style = {fullNameStyle}  onChange={onInputChange} />
+                        <CustomInput placeholder='Enter New Name' value= {fullName} style = {fullNameStyle}  onChange={onInputChange} />
                     </div>
 
                     <div className="border2" >
@@ -240,11 +252,11 @@ function EditedProfile() {
 
                     <div className="border2">
                         <p>Phone Number</p>
-                        <CustomInput  placeholder= {userInfo.phone} value= {phone} style = {phoneStyle}  onChange={(e) => setPhone(e.target.value)} />
+                        <CustomInput  placeholder= "Enter New Phone Number" value= {phone} style = {phoneStyle}  onChange={(e) => setPhone(e.target.value)} />
                     </div>
 
                     <div className="border2">
-                        <CustomButton title={'Confirm Changes'} type='submit' style={{width:'100%', height:'60px',borderRadius:'5rem'}}/>
+                        <CustomButton title={'Confirm Changes'} type='submit' style={{width:'100%', height:'60px',fontSize:'1.1rem',marginTop:'20px', borderRadius:'1rem'}}/>
                     </div> 
                     
                 </form>

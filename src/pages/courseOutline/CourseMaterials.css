@@ -8,12 +8,11 @@
     overflow: hidden;
 }
 
+
 .gen-course-mat div {
     border-radius: 1rem;
     margin: 10px;
     padding: 0.5rem;
-    text-align: center;
-    display: flex;
     background-color: white;
     color: black;
     box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
@@ -22,7 +21,7 @@
 }
 
 .gen-course-mat div:hover {
-    background: #0057ff;
+    background: #00296f; 
     transform: scale(1.04);  
     color: white;
 }

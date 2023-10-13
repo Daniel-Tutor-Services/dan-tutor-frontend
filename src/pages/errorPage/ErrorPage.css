@@ -1,7 +1,15 @@
 .errorbody {
-    background: #0057ff;
+    background: #00296f;
     overflow:hidden;
     height: 100vh;
+}
+
+.errorlogo{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    padding: 2rem 0;
+    align-items: center;
 }
 
 .errortext {
@@ -16,9 +24,21 @@
 .errorbody span {
     font-size: 12rem;
     margin-bottom: 0;
+    display: flex;
+    justify-content: center;
 }
 
 .errorbody p {
     font-size: 1.8rem;
     margin: 0;
+}
+
+
+
+@media screen and (max-width:520px){
+
+    .errorbody span {
+        font-size: 5rem;
+    }
+
 }

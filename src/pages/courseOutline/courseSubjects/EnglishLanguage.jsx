@@ -1,7 +1,7 @@
 import './courseSubjects.css';
 import { useEffect, useState } from 'react';
 import { BiArrowBack } from 'react-icons/bi';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import english from '../courseContents/english.json';
 
 
@@ -28,25 +28,26 @@ function EnglishLanguage() {
         return null;
     }
 
-
+    function goBackAndRefresh() {
+        window.history.go(-1);
+    }
 
 
 
 
     return (
 
-        <div className='courseSubjects-header' onFocus={ScrollToTop()} style={{margin:'0 auto', textAlign:'center', padding:'3rem 5em', width:'100%', background:'#7EDCAD'}}>
+        <div className='courseSubjects-header' onFocus={ScrollToTop()} style={{margin:'0 auto', textAlign:'center', padding:'3rem 1.5em',paddingBottom:'100%', width:'100%', background:'#00296f'}}>
             
-            <div style={{display:'flex', justifyContent:'start'}}>
-                <Link to= '/dash-board'>
-                    <BiArrowBack color='white' size={40}/>
-                </Link>
+            <div style={{display:'flex', justifyContent:'start', alignItems:'center', color:'whitesmoke', gap:'1rem'}}>
+                <BiArrowBack onClick={goBackAndRefresh} style={{cursor: 'pointer'}} color='white' size={40}/>
+                <span>Back</span>
             </div>
             
-            <div >
+            <div id='courseSubjects-hd'  >
 
-                <h1 id='courseSubjects-hd' style={{color:'white'}}>ENGLISH LANGUAGE</h1> 
-                <p style={{color:'black'}}>Here are lists of availaible topics in English Language. Click to learn more.</p>
+                <h1 style={{color:'white'}}>ENGLISH LANGUAGE</h1> 
+                <p style={{color:'wheat'}}>Here are lists of availaible topics in English Language. Click to learn moree.</p>
                 <br />
             </div>
 
@@ -59,9 +60,6 @@ function EnglishLanguage() {
 
                 <br />
                 <br />
-                <br />
-                <br />
-
 
                 <div className='courseSubjects-cont'>
                                 
@@ -70,9 +68,10 @@ function EnglishLanguage() {
 
                             if (query === '') {
                                 return english;
-                            } else if (english.topic.toLowerCase().includes(query.toLowerCase())) {
+                            } else if (english.topic.trim().toLowerCase().includes(query.toLowerCase())) {
                                 return english;
                             }
+
 
                         }).map((english, index) => (
 
@@ -100,11 +99,21 @@ function EnglishLanguage() {
 
                             </div>
                         ))
-                    }
+                    }  
 
-                </div>      
-                
+                </div>   
+
+                <div className="nocourse" style={{background:'red',display:'flex', justifyContent:'center', alignItems:'center', transform:'none', borderRadius:'20px', color:'black', width:'42vw', padding:'0.5rem', margin:'0 auto'}}> 
+
+                    <marquee  direction="left">
+                        <p style={{display:'flex', justifyContent:'center',padding:'0.3rem', margin:'10px', color:'white'}}>
+                            No Other Topic Available
+                        </p>
+                    </marquee>
+                </div>
+
             </div>
+
 
         </div>
     )

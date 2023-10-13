@@ -8,7 +8,7 @@ import {  useDispatch, useSelector } from 'react-redux';
 import { setCredentials } from '../../slices/authSlice';
 import {  useLoginMutation } from '../../slices/usersApiSlice';
 import img from '../../assets/image2.jpg';
-import dtlogo from '../../assets/dtlogo.png';
+import dtlogo from '../../assets/dtlogo2.png';
 import Loader from '../../components/loader/Loader';
 import CustomInput from '../../components/customInput/CustomInput';
 import CustomButton from '../../components/customButton/CustomButton';
@@ -70,7 +70,7 @@ function LoginPage () {
                 
                     <Link to='/' className='links'>
                         <div className="logmob">
-                            <img src={dtlogo} alt="dtlogo" className='mob-img' style={{width:'200px', height:'200px'}}/>
+                            <img src={dtlogo} alt="dtlogo" className='mob-img' style={{width:'200px', height:'170px'}}/>
                         </div>
                     </Link>  
 
@@ -79,7 +79,7 @@ function LoginPage () {
 
                     <h1>Login</h1>
 
-                    <CustomInput placeholder='Email Address*' value = {email} name="email" style = {{ width: '100%'}} onChange ={(e) => setEmail (e.target.value)} />
+                    <CustomInput placeholder='Email Address*' value = {email} name="email"  type='email' style = {{ width: '100%'}} onChange ={(e) => setEmail (e.target.value)} />
 
                     <CustomInput placeholder='Password*' value = {password} name="password"   type={passwordShown ? "password" : "text"}  style = {{width: '100%'}} onChange ={(e) => setPassword (e.target.value)}/>
                   
@@ -93,7 +93,7 @@ function LoginPage () {
                     </Link>
 
                     <div className='bottomzl' style={{marginTop: 'none', textAlign: 'left'}}> 
-                        <h5 style={{fontSize:'1rem', fontWeight:'bold'}}>Yet to register with us? 
+                        <h5 style={{fontSize:'1rem', fontWeight:'bold', color:'white'}}> Yet to register with us?
                             <span> 
                                 <Link to='/signup' style = {{textDecoration: 'none'}}  id='btspan'> <span>Sign Up</span> </Link> 
                             </span>

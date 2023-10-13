@@ -1,7 +1,7 @@
 import './courseSubjects.css';
 import { useEffect, useState } from 'react';
 import { BiArrowBack } from 'react-icons/bi';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import physics from '../courseContents/physics.json';
 
 
@@ -20,10 +20,14 @@ function Physics() {
             left: 0,
             behavior: 'smooth', 
         });
-    }, [pathname]);
-    
-    return null;
-}
+        }, [pathname]);
+
+        return null;
+    }
+
+    function goBackAndRefresh() {
+        window.history.go(-1);
+    }
 
 
 
@@ -31,17 +35,16 @@ function Physics() {
 
     return (
 
-        <div className='courseSubjects-header' onFocus={ScrollToTop()} style={{margin:'0 auto', textAlign:'center', padding:'3rem 5em', width:'100%', background:'#7EDCAD'}}>
+        <div className='courseSubjects-header' onFocus={ScrollToTop()} style={{margin:'0 auto', textAlign:'center', padding:'3rem 1.5em', paddingBottom:'100%',  width:'100%', background:'#00296f'}}>
             
-            <div style={{display:'flex', justifyContent:'start'}}>
-                <Link to= '/dash-board'>
-                    <BiArrowBack color='white' size={40}/>
-                </Link>
+            <div style={{display:'flex', justifyContent:'start', alignItems:'center', color:'whitesmoke', gap:'1rem'}}>
+                <BiArrowBack onClick={goBackAndRefresh} style={{cursor: 'pointer'}} color='white' size={40}/>
+                <span>Back</span>
             </div>
 
-            <div >
-                <h1 id='courseSubjects-hd' style={{color:'white'}}>PHYSICS</h1> 
-                <p style={{color:'white'}}>Here are lists of availaible topics in Physics. Click to learn more.</p>
+            <div id='courseSubjects-hd' >
+                <h1 style={{color:'white'}}>PHYSICS</h1> 
+                <p style={{color:'wheat'}}>Here are lists of availaible topics in Physics. Click to learn more.</p>
                 <br />
             </div>
 
@@ -52,7 +55,6 @@ function Physics() {
 
                 <input placeholder="Search Topic" onChange={event => setQuery(event.target.value)}  style={{width:'40vw',height:'52px', padding: '10px 15px 6px', fontFamily:'BioRhyme, serif'}}  className="dashinput" />
 
-                <br />
                 <br />
                 <br />
 
@@ -95,8 +97,18 @@ function Physics() {
                         ))
                     }
 
-                </div>      
-                
+                </div>   
+
+                <div className="nocourse" style={{background:'red',display:'flex', justifyContent:'center', alignItems:'center', transform:'none', borderRadius:'20px', color:'black', width:'42vw', padding:'0.5rem', margin:'0 auto'}}> 
+
+                    <marquee  direction="left">
+                        <p style={{display:'flex', justifyContent:'center',padding:'0.3rem', margin:'10px'}}>
+                            No Other Topic Available
+                        </p>
+                    </marquee>
+                </div>
+
+            
             </div>
 
         </div>

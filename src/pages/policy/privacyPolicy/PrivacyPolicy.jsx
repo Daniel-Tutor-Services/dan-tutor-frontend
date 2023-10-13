@@ -2,7 +2,7 @@ import './PrivacyPolicy.css';
 import { useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import { BiArrowBack } from 'react-icons/bi';
-import dtlogo from '../../../assets/dtlogo.png';
+import dtlogo from '../../../assets/dtlogo2.png';
 
 
 function PrivacyPolicy() {
@@ -21,6 +21,10 @@ function PrivacyPolicy() {
         return null;
     }
 
+    function goBackAndRefresh() {
+        window.history.go(-1);
+    }
+
 
 
 
@@ -28,22 +32,19 @@ function PrivacyPolicy() {
         <div className='policy-page' onChange={ScrollToTop()} >
 
             <div className='policyhead'>
+                
+                <BiArrowBack onClick={goBackAndRefresh} style={{cursor: 'pointer'}} color='white' size={40}/>
 
                 <div className='policyheadpic'>
-                    <Link to='/' className='links'>
-                        <img src={dtlogo} alt="dtlogo" style={{width:'180px'}}/>
+                    <Link to='/' className='links' >
+                        <img  src={dtlogo} alt="dtlogo"/>
                     </Link>
 
-                </div>
+                    <div className='policyheader'>         
+                        <h1>PRIVACY POLICY</h1>
+                    </div>
 
-                <Link to= '/'>
-                    <BiArrowBack color='white' size={40}/>
-                </Link>
-                
-                <div className='policyheader'>         
-                    <h1>PRIVACY POLICY</h1>
                 </div>
-
             </div>
 
             <div className='policy' >

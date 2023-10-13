@@ -1,7 +1,7 @@
 import './courseSubjects.css';
 import { useEffect, useState } from 'react';
 import { BiArrowBack } from 'react-icons/bi';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import mathematics from '../courseContents/mathematics.json';
 
 
@@ -24,20 +24,26 @@ function Mathematics() {
         return null;
     }
 
+    function goBackAndRefresh() {
+        window.history.go(-1);
+    }
+
+
+
+
 
     return (
 
-        <div className='courseSubjects-header' onFocus={ScrollToTop()} style={{margin:'0 auto', textAlign:'center', padding:'3rem 5em', width:'100%', background:'#7EDCAD'}}>
+        <div className='courseSubjects-header' onFocus={ScrollToTop()} style={{margin:'0 auto', textAlign:'center', padding:'3rem  1.5rem', paddingBottom:'100%', width:'100%', background:'#00296f'}}>
 
-            <div style={{display:'flex', justifyContent:'start'}}>
-                <Link to= '/dash-board'>
-                    <BiArrowBack color='white' size={40}/>
-                </Link>
+            <div style={{display:'flex', justifyContent:'start', alignItems:'center', color:'whitesmoke', gap:'1rem'}}>
+                <BiArrowBack onClick={goBackAndRefresh} style={{cursor: 'pointer'}} color='white' size={40}/>
+                <span>Back</span>
             </div>
 
-            <div >
-                <h1 id='courseSubjects-hd' style={{color:'white'}}>MATHEMATICS</h1> 
-                <p style={{color:'black'}}>Here are lists of availaible topics in Mathematics. Click to learn more.</p>
+            <div id='courseSubjects-hd' >
+                <h1 style={{color:'white'}}>MATHEMATICS</h1> 
+                <p style={{color:'wheat'}}>Here are lists of availaible topics in Mathematics. Click to learn more.</p>
                 <br />
             </div>
 
@@ -45,9 +51,8 @@ function Mathematics() {
 
             <div>
 
-                <input placeholder="Search Topic" onChange={event => setQuery(event.target.value)}  style={{width:'40vw',height:'52px', padding: '10px 15px 6px', fontFamily:'BioRhyme, serif'}}  className="dashinput" />
+                <input placeholder="Search Topic" onChange={event => setQuery(event.target.value)}  style={{width:'42vw',height:'52px', padding: '10px 15px 6px', fontFamily:'BioRhyme, serif'}}  className="dashinput" />
 
-                <br />
                 <br />
                 <br />
 
@@ -57,9 +62,14 @@ function Mathematics() {
                         mathematics.filter(mathematicz => {
 
                             if (query === '') {
+                                // alert ('kesh')
                                 return mathematicz;
                             } else if (mathematicz.topic.toLowerCase().includes(query.toLowerCase())) {
                                 return mathematicz;
+                            }
+
+                            else if ( mathematicz.topic.toLowerCase().includes(query.toLowerCase())=== '' ) {
+                                console.log('kesh');
                             }
                         }).map((mathematics, index) => (
 
@@ -88,7 +98,17 @@ function Mathematics() {
                         ))
                     }
 
-                </div>      
+                                            
+                </div>   
+
+                <div className="nocourse" style={{background:'red',display:'flex', justifyContent:'center', alignItems:'center', transform:'none', borderRadius:'20px', color:'black', width:'42vw', padding:'0.5rem', margin:'0 auto'}}> 
+
+                    <marquee  direction="left">
+                        <p style={{display:'flex', justifyContent:'center',padding:'0.3rem', margin:'10px'}}>
+                            No Other Topic Available
+                        </p>
+                    </marquee>
+                </div>  
                 
             </div>
 
