@@ -1,57 +1,57 @@
 [
     {
         "_id": 1,
-        "img":"Pictures/staff1.png",
-        "name":"Achilihu Daniel Uchenna",
+        "img":"https://avatars.githubusercontent.com/u/107114779?v=4",
+        "name":"Engr. Achilihu Daniel Uchenna",
         "about":"Chief Executive Officer"
           
     },
     {
         "_id": 2,
-        "img":"https://scontent.flos1-1.fna.fbcdn.net/v/t39.30808-6/379993599_1496126167871496_2741142102106731213_n.jpg?stp=dst-jpg_s600x600&_nc_cat=109&ccb=1-7&_nc_sid=5614bc&_nc_eui2=AeG6XNNENm0ehTTKoKhGWM_VFpQBu-NTVRsWlAG741NVG89xd7f1fxO5RE0VtRXdEnIulh3ml-3i5cemDOGQDkKG&_nc_ohc=256qJqErhj0AX-Fp9BC&_nc_zt=23&_nc_ht=scontent.flos1-1.fna&oh=00_AfA2we9EeEqq1TSWWhC7ZM_DEYgq99B6obHgk_k6ZPHs4Q&oe=652AEC50",
-        "name":"Lucius Ben",
+        "img":"https://joedangoldtech.netlify.app/static/media/Joseph.bf2b4c18.JPG",
+        "name":"Joseph Ukaga",
         "about":"Managing Director "
        
     },
     {
         "_id": 3,
-        "img":"https://media.licdn.com/dms/image/C4D03AQGnWgz0CNturQ/profile-displayphoto-shrink_200_200/0/1596326619418?e=1701907200&v=beta&t=OtSWVeErvkhZjW81J5X9Z9_1wvtXjLZpR5Ecg5SBWkw",
-        "name":"Achilihu Chinyere Beryl",
+        "img":"https://avatars.githubusercontent.com/u/62248294?s=100&v=4",
+        "name":"Glorious Abolade",
         "about":"Content Manager"
         
     },
     {
         "_id": 4,
-        "img":"https://media.licdn.com/dms/image/D4E03AQH8rHEk6uxQbQ/profile-displayphoto-shrink_100_100/0/1668864147736?e=1701907200&v=beta&t=KcZ4a9qBWw3g7jOEwC4cnFYTFKjjWlr-h6umiFLpQu8" ,
-        "name":"Achilihu Chidinma Victoria",
-        "about":"Legal Adviser"
+        "img":"https://avatars.githubusercontent.com/u/110849861?s=100&v=4" ,
+        "name":"Emmanuel Yeboah Manu",
+        "about":"Team Lead"
         
         
     },
     {
         "_id": 5,
-        "img":"https://scontent.flos1-2.fna.fbcdn.net/v/t39.30808-6/387730197_747985550674036_3139922682220945611_n.jpg?stp=cp6_dst-jpg&_nc_cat=104&ccb=1-7&_nc_sid=5614bc&_nc_eui2=AeG2MDOzCnXBJe71af1w2c6AGIT5aAG-B3EYhPloAb4HcVp1_R--sa0pQm-yc7-PazEFUPhJwvrKcoD32v-DHWBD&_nc_ohc=6IWrKAcquCUAX8I6-sy&_nc_zt=23&_nc_ht=scontent.flos1-2.fna&oh=00_AfC603JWKgPkt6ZIz9v4mcQWqMSYmv6dPFGtCguDer8keQ&oe=652BFEA4",
-        "name":"Sunday Akwaji ",
+        "img":"https://avatars.githubusercontent.com/u/85767456?s=100&v=4",
+        "name":"Martins Nkemakolam ",
         "about":"Instructor's Supervisor"
        
     },
     {
         "_id": 6,
-        "img":"https://scontent.flos5-1.fna.fbcdn.net/v/t1.6435-9/135784352_1682218055282498_9106563363684997948_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=174925&_nc_eui2=AeFc4CxUjwiEspzsOb753Wca64un25-Wij3ri6fbn5aKPYkCQ6AVaPyeYzSeBYD3E5NhFE3WeChyPz9hn38QoZ2w&_nc_ohc=G2G1XBXDZOoAX-P9cwH&_nc_ht=scontent.flos5-1.fna&oh=00_AfAS_eZ0jGbsYL-UrPTz9rKcbtgE2r39omZsvz34_ZOhqA&oe=6544D6C5",
+        "img":"https://avatars.githubusercontent.com/u/121112881?v=4",
         "name":"Cletus Emmanuel",
         "about":"Product Designer"
         
     },
     {
         "_id": 7,
-        "img":"https://scontent.flos5-1.fna.fbcdn.net/v/t1.18169-9/13062058_123227451414551_606878748512805753_n.jpg?stp=c0.3.206.206a_dst-jpg_p206x206&_nc_cat=110&ccb=1-7&_nc_sid=da31f3&_nc_eui2=AeHy-TfgJCiydWbj3O6OWpyJ8fe4S7vcNarx97hLu9w1qu3dR9jgQ0XMwEigiJ870GV-bWgHc9PTeYBJwaLxFGYW&_nc_ohc=ssUEzQYz1d4AX8tDKCX&_nc_ht=scontent.flos5-1.fna&oh=00_AfAJDIcY6aQbe5vhU9KOwAUEYc8y2J7AbT4m4FoEmFp4sg&oe=6544E3A6",
-        "name":"Okpara Paul ",
+        "img":"https://avatars.githubusercontent.com/u/122415202?s=100&v=4",
+        "name":"Nwankwo Emmanuel C.",
         "about":"Chief Technology Officer"
 
     },
     {
         "_id": 8,
-        "img":"https://scontent.flos5-3.fna.fbcdn.net/v/t1.6435-9/131008129_3340951559364763_779718978559202323_n.jpg?stp=c0.34.206.206a_dst-jpg_p206x206&_nc_cat=109&ccb=1-7&_nc_sid=da31f3&_nc_eui2=AeFNXsnhnq462SMH9PSm4HoshTm9FwWuDCyFOb0XBa4MLO8gBOPAB_Zv37nGMWJuurSPFnUG8DrJ-qfxo12NLPv_&_nc_ohc=muY2XeMrs3QAX_GzS10&_nc_ht=scontent.flos5-3.fna&oh=00_AfCMyV_NZFwLctDDXehkSEGaH0pauLSrADrhZRM7ZNeGKg&oe=6545045F",
+        "img":"https://media.licdn.com/dms/image/C4E03AQFIDlMlTokBsw/profile-displayphoto-shrink_200_200/0/1643480487790?e=1704931200&v=beta&t=HNr0vl-6JuvQPIWfSx82Ip2Sbn1RHxMn10Ujh48JRI0",
         "name":"Noble Didi",
         "about":"Chief Financial Ofiicer"
        
