@@ -59,15 +59,13 @@
 
 .col h2{
     font-size: 1.1rem;
-    color: white;
+    color: rgb(0, 0, 0);
     font-weight: bolder;
 }
 
-
-
 .form{
     width: 40%;
-    background: #00296f;
+    background: dodgerblue;
     border: 1px solid black;
     padding: 1.1rem 0;
     height: auto;
@@ -81,7 +79,6 @@
     width: 79%;
     margin: 14px auto;
     font-size: 1rem;   
-    color:rgba(0, 0, 0, 0.911);
     color:  white;
     line-height: 1.2rem;
     font-weight: bolder;
@@ -100,7 +97,7 @@
 }
 
 .bottoms span:hover{
-    color: yellow;
+    color: gold;
     transition: ease-in .3s;
 }
 
@@ -109,7 +106,7 @@
 }
 
 .bottoms a:hover{
-    color:  yellow;
+    color:  gold;
     transition: ease-in .3s;
 }
 
@@ -139,6 +136,22 @@
 
     .form{
         width: 100%;
+    }
+
+    
+    .bottoms h5{
+        color: black;
+    }
+    
+    .bottoms p{
+        color: black;
+    }
+    .bottoms span{
+        color: white;
+    }
+    
+    .bottoms a{
+        color: white;
     }
 }
 

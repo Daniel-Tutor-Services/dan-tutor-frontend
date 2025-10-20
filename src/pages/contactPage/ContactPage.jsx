@@ -1,4 +1,3 @@
-/* eslint-disable no-mixed-spaces-and-tabs */
 import './ContactPage.css';
 import { useState } from 'react';
 import { toast } from 'react-toastify';
@@ -143,14 +142,14 @@ function ContactPage () {
 						<span>Address</span>
 					</div>
 					
-					<span className="movec">Afe Babalola University Post Graduate School, <br/>  Ado Ekiti, Ekiti State, Nigeria.</span><br /><br />
+					<span className="movec">Federal Capital Territory, Abuja, Nigeria.</span><br /><br />
 					
 					<div className="groupc">
 						<Phone size={32} /> 
 						<span> Let Talk</span>
 					</div>
 					
-					<span className="movec">09037231624 or 09035007117</span><br /><br />
+					<span className="movec">+234 9037231624 or +234 9035007117</span><br /><br />
 					
 					<div className="groupc">
 						<EnvelopeSimple size={32} />
